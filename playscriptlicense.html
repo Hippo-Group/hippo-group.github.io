@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Redirecting...</title>
+      <meta http-equiv = "refresh" content = "4.25; url = https://drive.google.com/drive/folders/13idYgZTdQeBD0eeVKGqVk668_-U8BnPF?usp=sharing" />
+   </head>
+   <body>
+    <div id="sequence"></div>  
+	<script>
+        var example = ['Loading PlayScript Cloud...', 'Loading PlayPlugins...', 'Loading Google Drive...', 'Redirecting...'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = example[i];
+                    textSequence(++i);
+                }, 1000); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }
+    </script>
+   </body>
+</html>
